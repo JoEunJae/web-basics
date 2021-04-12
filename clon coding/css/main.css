@@ -1,0 +1,143 @@
+/* HEADER */
+
+div, li, ul a {
+    box-sizing: border-box;
+}
+
+/* #header1 .tap-area {
+    width: 100%;
+    box-sizing: border-box;
+} */
+
+#header1 .header_wrap {
+    position: relative;
+    padding: 0 30px;
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+#header1 .inner_wrap {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+#header1 .header_wrap .inner_wrap {
+    position: static;
+}
+
+#header1 .header_wrap .logo {
+    position: relative;
+    float: left;
+    margin-top: 40px;
+}
+
+#header1 .header_wrap .logo h1 a img {
+    display: inline-block;
+    width: 150px;
+    line-height: 70px;
+    background-size: 100% auto;
+    margin: -40px 0 0 -10px;
+}
+
+#header1 .header_wrap .wrapper {
+    padding-top: 40px;
+}
+
+#header1 .header_wrap .bar {
+    /* position: absolute; */
+    bottom: 0%;
+    height: 4px;
+    background-color: #007fa8;
+    opacity: 0%;
+    /* transition: left .4s ease, width .4s ease, opacity .4s ease; */
+}
+
+#header1 .util_wrap {
+    border-bottom: 1px solid #e5e5e5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+#header1 .util_wrap .inner_wrap {
+    padding: 0 30px;
+    height: 40px;
+}
+
+#header1 .util_wrap .login {
+    float: right;
+    padding: 13px 0;
+}
+
+#header1 .util_wrap .inner_wrap ul.login li:first-child {
+    border-left: none;
+}
+
+.link {
+    margin: 10 0 0 7;
+}
+
+#header1 .util_wrap .login li {
+    float: left;
+    position: relative;
+    height: 13px;
+    border-left: 1px solid #e5e5e5;
+    cursor: pointer;
+    text-align: center;
+}
+
+#haeder1 a {
+    outline: none;
+    text-decoration: none;
+}
+
+#header1 .login div {
+    display: inline-block;
+    vertical-align: top;
+    padding: 2.5px 15px;
+    font-size: 11px;
+    font-weight: bolder;
+    color: #767676;
+}
+
+#header1 .util_wrap .login a {
+    display: inline-block;
+    vertical-align: top;
+    padding: 2.5px 15px;
+}
+
+#header1 .util_wrap .inner_wrap ul.login .btn_worldwide {
+    margin: -3px 0px 0px -29px;
+    position: absolute;
+    justify-content:flex-end;
+}
+
+#header1 .util_wrap .inner_wrap ul.login .btn_search {
+    margin: -3px 0px 0px -25px;
+    position: absolute;
+    justify-content:flex-end;
+}
+
+#header1 .header_wrap .wrapper .head_menu>.head_list {
+    text-align: center;
+    font-size: 0;
+}
+
+#header1 .header_wrap .wrapper .head_menu>.head_list>li {
+    font-size: medium;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+#header1 .head_list div {
+    font-size: 15px;
+    letter-spacing: -.4px;
+    line-height: 70px;
+    padding: 0 15px;
+    color: #444;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
