@@ -1,0 +1,28 @@
+/* SLIDER ARROW */
+
+main .wrapper #slider .material-icons {
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    font-size: 80px;
+    color: #F6F5F0;
+    background-color: #333;
+}
+
+main .wrapper #slider .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    width: 0;
+    height: 0;
+}
+
+main .wrapper #slider .arrow--left {
+    left: 0px;
+}
+
+main .wrapper #slider .arrow--right {
+    right: 0px;
+}
