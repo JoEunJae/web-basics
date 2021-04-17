@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 /* HEADER */
 body {
     height: 100%;
@@ -157,39 +162,25 @@ div, li, ul a {
 
 /* MAIN SLIDER */
 
-main {
-    /* height: 100vh; */
-    position: relative;
-}
-
-main #slider {
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-    position: relative;
-}
-
-main .wrapper {
-    margin: 0 auto;
-    position: relative;
-}
-
 .mainvisual-wrap {
     margin: 0 auto;
     display: block;
     width: 100%;
-    position: relative;
+    /* position: relative; */
     background-color: #f6f3f2;
     overflow: hidden;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
-main #slider .slide {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-width: 100%;
+.slide-border {
     width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.slide-container {
+    height: 615px;
+    overflow: hidden;
 }
 
 .mainvisual-wrap .slide_content img {
@@ -200,102 +191,76 @@ main #slider .slide {
 main #slider .slide_content {
     width: 100%;
     display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
 }
-
 
 /* SLIDER ARROW */
 
-/* SLIDER ARROW */
-
-main #slider .material-icons {
-    justify-content: center;
-    position: absolute;
-    /* top: 50%; */
-    /* margin-top: -40px; */
-    font-size: 50px;
-    color: #F6F5F0;
-    background-color: #333;
-    margin-top: 280px;
+main #slider .slide-container .material-icons {
+    font-size: 30px;
+    line-height: 1.5;
 }
+
 
 main #slider .arrow {
-    cursor: pointer;
-    position: absolute;
-    /* top: 50%; */
-    /* margin-top: -50px; */
-    width: 0;
-    height: 0;
-}
-
-main #slider .arrow--left {
-    left: 0px;
-}
-
-main #slider .arrow--right {
-    right: 0px;
-}
-
-
-/* main .arrow {
-    position: absolute;
-    cursor: pointer;
-    display: inline-block;
     width: 44px;
     height: 44px;
-    margin-top: 280px;
     background-color: rgba(31,45,61,.4);
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    text-align: center;
 }
 
+main #slider .arrow--left :first-child {
+    display: none; 
+}
 
 main #slider .arrow--left {
-    color: #f6f5f0;
-    font-size: 30px;
-    margin: 7px 0 0 5px;
+    left: 0; 
 }
 
 main #slider .arrow--right {
-    color: #f6f5f0;
-    font-size: 30px;
-    margin: 7px 5px 0 0;}
- */
+    right: 0;
+}
+
 /* CONTROL-WRAP */
 .control-wrap {
     display: block;
     width: 1120px;
-    max-width: calc(100%-60px);
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 0 auto 42px;
-    opacity: 1;
+    margin: 0 auto 50px;
+    height: 4px;
 }
 
-.control-wrap_bar {
-    margin-bottom: -20px;
-    padding: 0 20px;
+.control-wrap_indicator {
+    overflow: hidden;
+    position: relative;
+    height: 4px;
 }
 
 .slideinfo-list {
     display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .slideinfo-list_item {
     width: 19.4%;
 }
 
-.slideinfo-list .slideinfo-list_attribute {
-    padding-top: 20px;
+/* .slideinfo-list .slideinfo-list_attribute {
+    padding-top: -80px;
     padding-bottom: 0;
-}
+} */
 
 .slideinfo-list_attribute {
     display: flex;
     flex-direction: column;
-    position: relative;
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -306,6 +271,20 @@ main #slider .arrow--right {
     cursor: pointer;
     font-size: 14px;
     line-height: 100%;
+    color: #fff;
+}
+
+.slideinfo-list_attribute .bar {
+    border-color: #fff;
+    border-color: #555;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 97%;
+    border-bottom: 4px;
+    border-style: solid;
 }
 
 .slideinfo-list_attribute p {
@@ -318,70 +297,87 @@ main #slider .arrow--right {
     margin-top: 10px;
     width: 100%;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
     overflow: hidden;
 }
 
-.model-wrap {
+.control-wrap_circle {
     display: flex;
     flex-direction: column;
-    left: 0;
+    position: absolute;
     right: 0;
     bottom: 0;
+}
+
+.control-wrap_pause {
+    margin-top: 15px;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    background-color: #575757;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+.control-wrap_pause .pause {
+    margin: 2px 0 0 1.5px;
+    display: block;
+    width: 1px;
+    height: 1px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* model-wrap */
+
+.model-wrap {
+    display: flex;
+    float: left;
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
     max-width: 1180px;
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
+    /* height: 100%; */
+    margin-top: -160px;
     text-align: left;
 }
 
-.model-wrap_square {
-    margin-left: 0;
-    position: absolute;
-
-}
-
-.model-wrap .model-wrap_square span {
+.model-wrap_square1 {
+    display: flex;
+    margin-top: auto;
     width: 120px;
     height: 40px;
     font-size: 15px;
     background: #002c5e;
-    font-weight: 500;
-    letter-spacing: -.4px;
+    font-weight: 600;
     color: #fff;
     cursor: pointer;
-    position: absolute;
-
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
-/* SLIDER BARS */
-
-main #slider .bars {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+.model-wrap_square2 {
     display: flex;
+    margin-top: auto;
+    margin-left: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    background: #002c5e;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
-main #slider .bars .bar {
-    border-color: #555;
-    bottom: auto;
-    top: 0;
-    content: "";
-    position: absolute;
-    left: 0;
+.model-wrap span {
+    vertical-align: middle;
     display: inline-block;
-    width: 100%;
-    border-bottom: 1px;
-    border-style: solid;
+    position: absolute;
 }
-
-main #slider .bars .bar1 {
-    background: #fff;
-    background: #1107ff;
-}
-
-
-

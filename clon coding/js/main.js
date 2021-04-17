@@ -64,7 +64,7 @@ const slideRight = () => {
 }
 
 // 오른쪽 화살표를 클릭할 시 작동하는 익명의 함수
-arrowLeft.addEvertListener('click', function() {
+arrowLeft.addEventListener('click', function() {
     // 만약 current값이 0이라면,
     // 즉 현재 보이는 슬라이드 이미지가 첫번째 순서라면,
     if(current === 0) {
